@@ -1,0 +1,30 @@
+#sdk: "/home/dvh638/.rvm/gems/ruby-1.9.3-p551@5.0.20/gems/rhodes-5.0.20"
+sdkversion: 5.0.0
+name: rhd4
+version: 1.0
+vendor: rhomobile
+build: debug
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator8.0
+  provisionprofile:
+  codesignidentity: iPhone Developer
+  entitlements: ""
+  BundleIdentifier: com.rhomobile.rhd4
+  BundleURLScheme: rhd4
+  production:
+    ipa_itunesartwork_image: "./production/iTunesArtwork.png"  
+wp8:
+  productid: '1fd05360-b385-0132-d28c-56847afe9799'
+android:
+  manifest_template: 'AndroidManifest.erb'
+  version: 2.3.3
+  # Note: in order to simplify debugging only app messages and system channels with priority informative and higher, and any errors are enabled by default
+  logcatFilter: APP:I StrictMode:I DEBUG:I *:E
+
+wm:
+  #sdk: "MC3000c50b (ARMV4I)"
+  #sdk: "Windows Mobile 6.5.3 Professional DTK (ARMV4I)"
+
+extensions: ["rhoconnect-client"]
